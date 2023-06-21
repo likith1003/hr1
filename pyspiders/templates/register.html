@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is register page</h1>
+    <form action="/register" method="post">
+        {% csrf_token %}
+        <input type="text" name="pno" placeholder="Enter a Phone Number">
+        <input type="text" name="un" placeholder="Enter a Username">
+        <input type="text" name="pw" placeholder="Enter a Password">
+        <input type="text" name="cpw" placeholder="conform a Password">
+        <br><br>
+        already a user? <a href="/studentlogin">Login</a><br><br>
+        <button type="submit">Register</button>
+    </form>
+    {% for message in messages %}
+    <h1>{{message.message}}</h1>
+    {% endfor %}
+</body>
+</html>

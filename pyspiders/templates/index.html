@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyspiders | {% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><img src="../static/logo_pyspiders.4f56184.png" alt=""></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/mock">Mock</a></li>
+            <li><a href="/verifystudent">Verify Student</a></li>
+            <li><a href="/addstudent">Add Student</a></li>
+            {% if a %}
+            <li><a href="/login">Logout</a></li>
+            {% else %}
+            <li><a href="/login">Login AS HR</a></li>
+            {% endif %}
+
+
+            <li><a href="/studentlogin">Login AS Student</a></li>
+        </ul>
+    </div>
+    <style>
+        #navbar ul,#navbar li{
+            display: inline-block;
+        }
+    </style>
+    {% block body %}{% endblock body %}
+</body>
+</html>

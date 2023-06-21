@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abc(){
+            document.getElementById('det').style.display='block'
+            document.getElementById('mock').style.display='none'
+        }
+        function xyz(){
+            document.getElementById('mock').style.display='block'
+            document.getElementById('det').style.display='none'
+        }
+        function pqr(){
+            document.getElementById('mock').style.display='block'
+            document.getElementById('det').style.display='block'
+        }
+    </script>
+        <style>
+            th{
+                background-color: black;
+                color: aliceblue;
+            }
+            table{
+                display: none;
+                width: 100%;
+            }
+        </style>
+    <h1>This is home page</h1>
+    <button onclick="abc()">Details</button>
+    <button onclick="xyz()">Mock Details</button>
+    <button onclick="pqr()">Display both</button>
+    <table id="det">
+        <tr>
+            <th>Name</th>
+            <th>pno</th>
+            <th>email</th>
+            <th>qualification</th>
+            <th>stream</th>
+            <th>degree yop</th>
+            <th>degree %</th>
+            <th>12th %</th>
+            <th>10th %</th>
+        </tr>
+        <tr>
+            <td>{{det.name}}</td>
+            <td>{{det.pno}}</td>
+            <td>{{det.email}}</td>
+            <td>{{det.qual}}</td>
+            <td>{{det.stream}}</td>
+            <td>{{det.dyop}}</td>
+            <td>{{det.dp}}</td>
+            <td>{{det.twp}}</td>
+            <td>{{det.tp}}</td>
+        </tr>
+        
+    </table>
+    <table id="mock">
+        <tr>
+            <th>name</th>
+            <th>Pno</th>
+            <th>email</th>
+            <th>Subject</th>
+            <th>Comm</th>
+            <th>Tech</th>
+            <th>prog</th>
+            <th>Rated by</th>
+        </tr>
+        <tr>
+            <td>{{mock.name}}</td>
+            <td>{{mock.pno}}</td>
+            <td>{{mock.email}}</td>
+            <td>{{mock.subject}}</td>
+            <td>{{mock.comm}}</td>
+            <td>{{mock.tech}}</td>
+            <td>{{mock.prog}}</td>
+            <td>{{mock.by}}</td>
+        </tr>
+    </table>
+
+</body>
+</html>

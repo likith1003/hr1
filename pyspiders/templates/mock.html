@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>This is mock page</h1>
+<form action="/mock" method="post">
+    {% csrf_token %}
+    <input type="text" name='nme' placeholder="Enter name">
+    <input type="text" name='pno' placeholder="Enter pno">
+    <input type="text" name='email' placeholder="Enter email">
+    <select name="subject" id="">
+        <option value="" selected disabled>subject</option>
+        <option value="python">python</option>
+        <option value="sql">sql</option>
+        <option value="aptitude">aptitude</option>
+        <option value="django">django</option>
+        <option value="sdlc">sdlc</option>
+        <option value="manual testing">manual testing</option>
+        <option value="automation testing">automation testing</option>
+        <option value="web tech">web tech</option>
+    </select>
+    <select name="comm" id="">
+        <option value=""selected disabled>Communication rating</option>
+        <option value="*">*</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <select name="tech" id="">
+        <option value=""selected disabled>Technical rating</option>
+        <option value="*">*</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <select name="prog" id="">
+        <option value=""selected disabled>Programming rating</option>
+        <option value="*">*</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <select name="Trainers" id="">
+        <option value="" selected disabled>Trainer</option>
+        <option value="likhit">likhit</option>
+        <option value="vinay krishna">vinay krishna</option>
+        <option value="vignesh">vignesh</option>
+        <option value="javed khan">javed khan</option>
+        <option value="nagesh dj">nagesh dj</option>
+        <option value="tejashri">tejashri</option>
+    </select>
+    <button type="submit">submit</button>
+    
+</form>
+
+{% for message in messages %}
+<h1>{{message.message}}</h1>
+{% endfor %}
+{% endblock body %}

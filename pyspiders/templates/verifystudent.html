@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+This is verify page
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="verify by pno" name="pno" value="">
+    <input type="text" placeholder="verify by email" name="email" value="">
+    <button type='submit'>Verify</button>
+</form>
+name={{std.name}}
+pno={{std.pno}}
+{% endblock body %}

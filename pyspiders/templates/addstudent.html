@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="/addstudent" method="post">
+    {% csrf_token %}
+    <input required type="text" placeholder="Student name" name="sname" required>
+    <input type="text" placeholder="Phone Number" name="pno" required>
+    <input type="text" placeholder="Email id" name="email" required>
+    <input type="text" placeholder="Qualification" name="qual" required>
+    <input type="text" placeholder="Stream" name="str" required>
+    <input type="text" placeholder="Degree YOP" name="dyop" required>
+    <input type="text" placeholder="Degree %" name="dp" required>
+    <input type="text" placeholder="12th/diploma %" name="twp" required>
+    <input type="text" placeholder="10th" name="tp" required>
+    <button type="submit">Submit</button>
+</form>
+{% for message in messages %}
+<h1>{{message.message}}</h1>
+{% endfor %}
+
+{% endblock body %}

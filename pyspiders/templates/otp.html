@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/otp" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter a OTP" name="enterotp">
+        <button type="submit">Submit otp</button>
+    </form>
+    {% for message in messages %}
+    <h1>{{message.message}}</h1>
+    {% endfor %}
+</body>
+</html>
